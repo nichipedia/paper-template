@@ -1,0 +1,26 @@
+\documentclass[letterpaper,12pt]{article}
+    \usepackage{geometry}
+    \usepackage[utf8]{inputenc}
+    \usepackage[english]{babel}
+    \usepackage[backend=biber]{biblatex}
+    \addbibresource{references.bib}
+    \geometry{margin=1in}
+    \pagenumbering{arabic}
+    \title{Template Paper}
+    \author{Nicholas Moran}
+    \date{July 2018}
+
+    \makeatletter
+        \def\@maketitle{%
+        \newpage
+        \null
+        \let \footnote \thanks
+            {\@author \par}%
+            {Computational Geometry \par}
+            {\@date \par}%
+        \begin{center}
+            {\large \@title}
+        \end{center}
+        \par
+        \vskip 1.5em}
+    \makeatother
